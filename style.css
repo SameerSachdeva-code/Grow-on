@@ -55,6 +55,11 @@ body {
   overflow-x: hidden;
   
 }
+.active{
+  border-bottom: 2px solid  #2D3564;;
+  font-weight: 700;
+
+}
 .bg-nav {
   display: flex;
   position: fixed;
@@ -84,9 +89,7 @@ body {
   margin-left: 15em;
   text-decoration: none;
 }
-.bg-nav .navlist ul li a:hover {
-  font-weight: 700;
-}
+
 
 .bg-nav .navlist li {
   display: inline-block;
@@ -427,25 +430,70 @@ content .search button img {
   top: 10px;
   left: 15px;
 }
+.name {
+  font-weight: 600 !important;
+}
+
+.cost-container {
+  position: absolute;
+  background: #FBFBFB;
+  border-radius: 15px;
+  bottom: 10px;
+  right: 20px;
+  padding: 3px;
+}
+
+.cost-container h1 {
+  font-weight: 600 !important;
+  text-align: center;
+  color: #2D3564;
+  font-family: Inter;
+font-style: normal;
+font-size: 30px;
+
+}
+
+.cost-container a {
+  text-decoration: none;
+  color: #fff;
+  background: #FF9518;
+  border-radius: 12px;
+  font-size: 25px;
+  padding: 5px;
+}
 
 .result-section {
   position: relative;
   top: 2vh;
-  background-color: rgba(130, 195, 255, 0.337);
+  background-color: rgb(144, 201, 255);
   height: 0vh;
-  width: 375px;
-  display: inline-block;
+  width: 380px;
+  z-index: 9989;
+  
 }
 
 .filter-container {
   margin-top: 20px;
+  margin-left: 30px;
+  transform: translateX(10px);
+  background: rgba(147, 155, 255, 0.4);
+backdrop-filter: blur(20px);
+z-index: 9999;
+
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+font-family: Inter;
+
 }
 
 .filter-heading,
 .level-container,
 .language-container,
 .price-container {
-  background: #ff9518;
+  background: #F6A246;
 
   width: 90%;
   margin: 10px auto;
@@ -457,19 +505,23 @@ content .search button img {
   text-align: center;
   color: #fff;
   font-size: 36px;
+  
 }
 
 .level-container h3,
 .language-container h3,
 .price-container h3 {
   color: #fff;
-  padding-left: 5px;
+  padding-left: 10px;
+  transform: translateY(8px);
+  /* transform: translateX(10px); */
+  /* background-color: #000000; */
 }
 
 select {
-  background: #fbfbfb;
+  background: #fbfbfbb6;
 
-  height: 50px;
+  height: 40px;
   border-radius: 12px;
   margin: 10px 15px;
   width: 90%;
@@ -477,9 +529,9 @@ select {
 
 .languages,
 .prices {
-  background: #fbfbfb;
+  background: #fbfbfbb6;
 
-  width: 90%;
+  width: 86%;
   border-radius: 12px;
   margin: 10px 15px;
   margin-bottom: 10px;
@@ -495,12 +547,18 @@ label {
   position: absolute;
   top: 10px;
   display: block;
+ z-index: -800;
+ left: 450px;
+}
+.results{
+  /* background-color: #0000003f; */
+  margin-top: -20px;
 }
 .result-section .results .r-box1 {
   position: relative;
   width: 885px;
   height: 200px;
-  left: 450px;
+  left: 0px;
   top: 10px;
 
   background: rgba(174, 255, 146, 0.5);
@@ -650,7 +708,7 @@ label {
   position: relative;
   width: 885px;
   height: 200px;
-  left: 450px;
+  left: 0px;
   top: 50px;
 
   background: rgba(174, 255, 146, 0.5);
@@ -884,6 +942,17 @@ label {
 }
 .three-card .card-2 .list ul {
   list-style-type: none;
+}
+.rate{
+  background:  #96FF71;
+  position: absolute;
+  top: 115px;
+  left: 345px;
+  border-radius: 8px;
+  padding: 3px 4px;
+  font-family: Inter;
+font-style: normal;
+font-weight: bold;
 }
 .three-card .card-2 button {
   width: 310px;
