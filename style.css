@@ -43,7 +43,7 @@ html {
   height: 100vh;
 }
 .background {
-  background: url(bg-main.png);
+  background: url(/images/bg-main.png);
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -53,7 +53,7 @@ html {
 }
 body {
   overflow-x: hidden;
-  overflow-x: hidden; 
+  
 }
 .bg-nav {
   display: flex;
@@ -84,6 +84,10 @@ body {
   margin-left: 15em;
   text-decoration: none;
 }
+.bg-nav .navlist ul li a:hover {
+  font-weight: 700;
+}
+
 .bg-nav .navlist li {
   display: inline-block;
   line-height: 5em;
@@ -232,7 +236,6 @@ content .search button img {
   text-align: center;
   justify-content: center;
   height: 60px;
-  
 }
 .text2 h2 {
   font-family: Poppins;
@@ -331,7 +334,7 @@ content .search button img {
 /* courses-----------------------------------------------*/
 .search-section {
   position: relative;
-  top: 21vh;
+
   background-color: rgba(255, 150, 150, 0);
   height: 50vh;
   justify-items: center;
@@ -424,27 +427,73 @@ content .search button img {
   top: 10px;
   left: 15px;
 }
+
 .result-section {
   position: relative;
-  top: 23vh;
+  top: 2vh;
   background-color: rgba(130, 195, 255, 0.337);
   height: 0vh;
+  width: 375px;
   display: inline-block;
 }
-.result-section .filter-box {
-  position: absolute;
-  width: 401px;
-  height: 487px;
-  left: 20px;
-  top: 10px;
 
-  background: rgba(147, 155, 255, 0.4);
-  backdrop-filter: blur(20px);
-  /* Note: backdrop-filter has minimal browser support */
+.filter-container {
+  margin-top: 20px;
+}
 
-  border-radius: 20px;
+.filter-heading,
+.level-container,
+.language-container,
+.price-container {
+  background: #ff9518;
+
+  width: 90%;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  border-radius: 12px;
+}
+
+.filter-heading h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+}
+
+.level-container h3,
+.language-container h3,
+.price-container h3 {
+  color: #fff;
+  padding-left: 5px;
+}
+
+select {
+  background: #fbfbfb;
+
+  height: 50px;
+  border-radius: 12px;
+  margin: 10px 15px;
+  width: 90%;
+}
+
+.languages,
+.prices {
+  background: #fbfbfb;
+
+  width: 90%;
+  border-radius: 12px;
+  margin: 10px 15px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+label {
+  font-size: 14px;
+  line-height: 17px;
+  color: #2d3564;
 }
 .result-section .results {
+  position: absolute;
+  top: 10px;
   display: block;
 }
 .result-section .results .r-box1 {
@@ -495,10 +544,26 @@ content .search button img {
 
   color: #2d3564;
 }
-.result-section .results .r-box1 h4 {
-  position: relative;
-  left: 300px;
-  z-index: 999;
+.result-section .results .r-box1 .price-box {
+  position: absolute;
+  top: 27px;
+  left: 390px;
+  background: #fbfbfb79;
+
+  border-radius: 12px;
+  z-index: 990;
+}
+
+.result-section .results .r-box1 .price-box h2 {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+}
+#name {
+  position: absolute;
+  left: 340px;
+  top: 90px;
+
   font-family: Bree Serif;
   font-style: normal;
   font-weight: normal;
@@ -521,7 +586,7 @@ content .search button img {
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 17.5px;
   line-height: 44px;
   display: flex;
   align-items: center;
@@ -556,7 +621,30 @@ content .search button img {
   align-items: center;
   color: #2d3564;
 }
+.result-section .results .r-box1 .rate-box h2 {
+  position: absolute;
+  left: 5px;
+  top: -7px;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+}
 .result-section .results .r-box1 .rate-box {
+  position: absolute;
+  top: 125px;
+  left: 340px;
+  height: 30px;
+  width: 60px;
+  background: #96ff71;
+  border-radius: 12px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  display: flex;
+
+  color: #0d0d0d;
 }
 .result-section .results .r-box2 {
   position: relative;
@@ -586,68 +674,66 @@ content .search button img {
   text-align: center;
   z-index: 990;
 }
-#heading{
+#heading {
   position: relative;
   top: 120px;
   font-family: Raleway;
-font-style: normal;
-font-weight: bold;
-font-size: 48px;
-line-height: 95px;
-/* identical to box height */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 95px;
+  /* identical to box height */
 
-
-color: #2D3564;
+  color: #2d3564;
 }
-.card-1 h2{
+.card-1 h2 {
   position: relative;
-left: 2px;
-top: 30px;
+  left: 2px;
+  top: 30px;
 
-font-family: Raleway;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 30px;
-text-align: center;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
 
-color: #000000;
+  color: #000000;
 }
-.card-1 h3{
+.card-1 h3 {
   position: absolute;
-left: 50px;
-top: 53vh;
+  left: 50px;
+  top: 53vh;
 
-font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 26px;
-line-height: 44px;
-/* identical to box height */
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 44px;
+  /* identical to box height */
 
-
-color: #000000;
+  color: #000000;
 }
 .three-card .card-1 {
   position: absolute;
-width: 310px;
-height: 442px;
-left: 130px;
-top: 210px;
-justify-content: center;
-text-align: center;
-z-index: 990;
+  width: 310px;
+  height: 442px;
+  left: 130px;
+  top: 210px;
+  justify-content: center;
+  text-align: center;
+  z-index: 990;
 
-background: rgba(248, 201, 36, 0.5);
-backdrop-filter: blur(10px);
-/* Note: backdrop-filter has minimal browser support */
+  background: rgba(248, 201, 36, 0.5);
+  backdrop-filter: blur(10px);
+  /* Note: backdrop-filter has minimal browser support */
 
-border-radius: 20px;
+  border-radius: 20px;
 }
-.three-card .card-1 .list ul{
+.three-card .card-1 .list ul {
   list-style-type: none;
 }
-.three-card .card-1 button{
+.three-card .card-1 button {
   width: 310px;
   height: 50px;
   position: relative;
@@ -655,157 +741,151 @@ border-radius: 20px;
   cursor: pointer;
   border: 0;
   font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 36px;
-line-height: 50px;
-/* identical to box height */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 50px;
+  /* identical to box height */
 
-
-color: #FFFFFF;
-background: #FF800C;
-border-radius: 0px 0px 20px 20px;
+  color: #ffffff;
+  background: #ff800c;
+  border-radius: 0px 0px 20px 20px;
 }
-.three-card .card-1 .list li{
+.three-card .card-1 .list li {
   position: relative;
   top: 20px;
   left: 15px;
   width: 200px;
   font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 15px;
-line-height: 29px;
-text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 29px;
+  text-align: center;
 
-color: #2D3564;
+  color: #2d3564;
   text-decoration: none;
 }
-.three-card .card-1 .list{
+.three-card .card-1 .list {
   position: absolute;
-width: 230px;
-height: 220px;
-left: 40px;
-top: 120px;
-justify-content: center;
-text-align: center;
-z-index: 990;
+  width: 230px;
+  height: 220px;
+  left: 40px;
+  top: 120px;
+  justify-content: center;
+  text-align: center;
+  z-index: 990;
 
-background: #fbfbfb6e;
+  background: #fbfbfb6e;
 
-border-radius: 20px;
+  border-radius: 20px;
 }
-.card-2 .bestseller{
+.card-2 .bestseller {
   position: absolute;
   top: -285px;
   left: 50px;
 }
-.card-2 .bestseller img{
+.card-2 .bestseller img {
   position: absolute;
   width: 80px;
 }
-.card-2 .bestseller h3{
+.card-2 .bestseller h3 {
   position: absolute;
   left: -70px;
   top: 320px;
   width: 100px;
-font-family: Raleway;
-font-style: normal;
-font-weight: bold;
-font-size: 14px;
-line-height: 10px;
-z-index: 990;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 10px;
+  z-index: 990;
 
-color: #000000;
+  color: #000000;
 
-transform: rotate(-48.84deg);
+  transform: rotate(-48.84deg);
 }
-.card-2 h2{
+.card-2 h2 {
   position: relative;
-left: 2px;
-top: 30px;
+  left: 2px;
+  top: 30px;
 
-font-family: Raleway;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 30px;
-text-align: center;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
 
-color: #000000;
+  color: #000000;
 }
-.card-2 h3{
+.card-2 h3 {
   position: absolute;
-left: 65px;
-top: 54vh;
+  left: 65px;
+  top: 54vh;
 
-font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 26px;
-line-height: 44px;
-/* identical to box height */
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 44px;
+  /* identical to box height */
 
-
-color: #000000;
+  color: #000000;
 }
-.card-2 img{
+.card-2 img {
   position: relative;
   top: 285px;
   left: -50px;
 }
-.card-2 h4{
+.card-2 h4 {
   position: relative;
   top: 265px;
   left: -50px;
   font-family: Inter;
-font-style: normal;
-font-weight: normal;
-font-size: 19px;
-line-height: 29px;
-/* identical to box height */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 29px;
+  /* identical to box height */
 
+  color: #0d0d0d;
 
-color: #0D0D0D;
-
-opacity: 0.75
-
+  opacity: 0.75;
 }
-.card-2 h5{
+.card-2 h5 {
   position: relative;
   top: 235px;
   left: 50px;
 
   font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 19px;
-line-height: 29px;
-/* identical to box height */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
+  /* identical to box height */
 
-
-color: #000000;
-
+  color: #000000;
 }
 .three-card .card-2 {
   position: absolute;
-width: 310px;
-height: 442px;
-left: 510px;
-top: 210px;
-justify-content: center;
-text-align: center;
-z-index: 990;
-background: rgba(113, 255, 64, 0.5);
-backdrop-filter: blur(10px);
-/* Note: backdrop-filter has minimal browser support */
+  width: 310px;
+  height: 442px;
+  left: 510px;
+  top: 210px;
+  justify-content: center;
+  text-align: center;
+  z-index: 990;
+  background: rgba(113, 255, 64, 0.5);
+  backdrop-filter: blur(10px);
+  /* Note: backdrop-filter has minimal browser support */
 
-border-radius: 20px;
+  border-radius: 20px;
 }
-.three-card .card-2 .list ul{
+.three-card .card-2 .list ul {
   list-style-type: none;
 }
-.three-card .card-2 button{
+.three-card .card-2 button {
   width: 310px;
   height: 50px;
   position: relative;
@@ -813,134 +893,128 @@ border-radius: 20px;
   cursor: pointer;
   border: 0;
   font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 36px;
-line-height: 50px;
-/* identical to box height */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 50px;
+  /* identical to box height */
 
-
-color: #FFFFFF;
-background: #FF800C;
-border-radius: 0px 0px 20px 20px;
+  color: #ffffff;
+  background: #ff800c;
+  border-radius: 0px 0px 20px 20px;
 }
-.three-card .card-2 .list li{
+.three-card .card-2 .list li {
   position: relative;
   top: 10px;
   left: 15px;
   width: 200px;
   font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 15px;
-line-height: 25px;
-text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
 
-color: #2D3564;
+  color: #2d3564;
   text-decoration: none;
 }
-.three-card .card-2 .list{
+.three-card .card-2 .list {
   position: absolute;
-width: 230px;
-height: 220px;
-left: 40px;
-top: 120px;
-justify-content: center;
-text-align: center;
-z-index: 990;
+  width: 230px;
+  height: 220px;
+  left: 40px;
+  top: 120px;
+  justify-content: center;
+  text-align: center;
+  z-index: 990;
 
-background: #fbfbfb6e;
+  background: #fbfbfb6e;
 
-border-radius: 20px;
+  border-radius: 20px;
 }
 
-.card-3 h2{
+.card-3 h2 {
   position: relative;
-left: 2px;
-top: 30px;
+  left: 2px;
+  top: 30px;
 
-font-family: Raleway;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 30px;
-text-align: center;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
 
-color: #000000;
-}   
-.card-3 h3{
-  position: absolute;
-left: 95px;
-top: 54vh;
-
-font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 26px;
-line-height: 44px;
-/* identical to box height */
-
-
-color: #000000;
+  color: #000000;
 }
-.card-3 img{
+.card-3 h3 {
+  position: absolute;
+  left: 95px;
+  top: 54vh;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 44px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.card-3 img {
   position: relative;
   top: 225px;
   left: -50px;
 }
-.card-3 h4{
+.card-3 h4 {
   position: relative;
   top: 280px;
   left: -50px;
   font-family: Inter;
-font-style: normal;
-font-weight: normal;
-font-size: 19px;
-line-height: 29px;
-/* identical to box height */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 29px;
+  /* identical to box height */
 
+  color: #0d0d0d;
 
-color: #0D0D0D;
-
-opacity: 0.75
-
+  opacity: 0.75;
 }
-.card-3 h5{
+.card-3 h5 {
   position: relative;
   top: 250px;
   left: 50px;
 
   font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 19px;
-line-height: 29px;
-/* identical to box height */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
+  /* identical to box height */
 
-
-color: #000000;
-
+  color: #000000;
 }
 .three-card .card-3 {
   position: absolute;
-width: 310px;
-height: 442px;
-right: 150px;   
-top: 210px;
-justify-content: center;
-text-align: center;
-z-index: 990;
+  width: 310px;
+  height: 442px;
+  right: 150px;
+  top: 210px;
+  justify-content: center;
+  text-align: center;
+  z-index: 990;
 
-background: rgba(255, 58, 58, 0.5);
-backdrop-filter: blur(10px);
-/* Note: backdrop-filter has minimal browser support */
+  background: rgba(255, 58, 58, 0.5);
+  backdrop-filter: blur(10px);
+  /* Note: backdrop-filter has minimal browser support */
 
-border-radius: 20px;
+  border-radius: 20px;
 }
-.three-card .card-3 .list ul{
+.three-card .card-3 .list ul {
   list-style-type: none;
 }
-.three-card .card-3 button{
+.three-card .card-3 button {
   width: 310px;
   height: 50px;
   position: relative;
@@ -948,59 +1022,56 @@ border-radius: 20px;
   cursor: pointer;
   border: 0;
   font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 36px;
-line-height: 50px;
-/* identical to box height */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 50px;
+  /* identical to box height */
 
-
-color: #FFFFFF;
-background: #FF800C;
-border-radius: 0px 0px 20px 20px;
+  color: #ffffff;
+  background: #ff800c;
+  border-radius: 0px 0px 20px 20px;
 }
-.three-card .card-3 .list li{
+.three-card .card-3 .list li {
   position: relative;
   top: 10px;
   left: 15px;
   width: 200px;
   font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 15px;
-line-height: 25px;
-text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
 
-color: #2D3564;
+  color: #2d3564;
   text-decoration: none;
 }
-.three-card .card-3 .list{
+.three-card .card-3 .list {
   position: absolute;
-width: 230px;
-height: 220px;
-left: 40px;
-top: 120px;
-justify-content: center;
-text-align: center;
-z-index: 990;
+  width: 230px;
+  height: 220px;
+  left: 40px;
+  top: 120px;
+  justify-content: center;
+  text-align: center;
+  z-index: 990;
 
-background: #fbfbfb6e;
+  background: #fbfbfb6e;
 
-border-radius: 20px;
+  border-radius: 20px;
 }
 
-
-.img11{
+.img11 {
   right: 0px;
   top: 0px;
   position: absolute;
   z-index: 0;
-
 }
-.img11 img{
+.img11 img {
   width: 350px;
   position: relative;
- right: -10px;
+  right: -10px;
   top: 100px;
   z-index: 0;
 }
@@ -1009,13 +1080,11 @@ border-radius: 20px;
   bottom: -100px;
   position: absolute;
   z-index: 0;
-
 }
-.img12 img{
-  
+.img12 img {
   width: 350px;
   position: relative;
- left: -10px;
+  left: -10px;
   bottom: 100px;
   z-index: 0;
 }
